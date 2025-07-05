@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 2 </title>
+</head>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .first {
+        height: 10vh;
+        width: 30vw;
+        background-color: rgb(255, 255, 0);
+        text-align: center;
+        text-justify: center;
+    }
+
+    .first:hover {
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation: firstanimation 3s linear infinite;
+    }
+
+    @keyframes firstanimation {
+        from {
+            width: 30vw;
+        }
+
+        to {
+            width: 50vw;
+        }
+
+    }
+
+    .second {
+        height: 10vh;
+        width: 30vw;
+        background-color: rgb(211, 211, 0);
+        text-align: center;
+        text-justify: center;
+    }
+
+    .second:hover {
+        animation: secondanimation 3s ease infinite;
+    }
+
+    @keyframes secondanimation {
+        from {
+            width: 30vw;
+        }
+
+        to {
+            width: 50vw;
+        }
+
+    }
+
+    .third {
+        height: 10vh;
+        width: 30vw;
+        background-color: rgb(184, 184, 1);
+        text-align: center;
+        text-justify: center;
+    }
+
+    .third:hover {
+        animation: thirdanimation 3s ease-in infinite;
+    }
+
+    @keyframes thirdanimation {
+        from {
+            width: 30vw;
+        }
+
+        to {
+            width: 50vw;
+        }
+
+    }
+
+    .fourth {
+        height: 10vh;
+        width: 30vw;
+        background-color: rgb(149, 149, 0);
+        text-align: center;
+        text-justify: center;
+    }
+
+    .fourth:hover {
+        animation: fourthanimation 3s ease-in-out infinite;
+    }
+
+    @keyframes fourthanimation {
+        from {
+            width: 30vw;
+        }
+
+        to {
+            width: 50vw;
+        }
+
+    }
+
+    .fifth {
+        height: 10vh;
+        width: 30vw;
+        background-color: rgb(112, 112, 1);
+        text-align: center;
+        text-justify: center;
+    }
+
+    .fifth:hover {
+        animation: fifthanimation 3s cubic-bezier(0.1, -0.6, 0.2, 0) infinite;
+    }
+
+    @keyframes fifthanimation {
+        from {
+            width: 30vw;
+        }
+
+        to {
+            width: 50vw;
+        }
+
+    }
+
+    .sixth {
+        height: 10vh;
+        width: 30vw;
+        background-color: rgb(92, 92, 1);
+        text-align: center;
+        text-justify: center;
+    }
+
+    .sixth:hover {
+        animation: sixthanimation 3s ease-out infinite;
+
+    }
+
+    @keyframes sixthanimation {
+        from {
+            width: 30vw;
+        }
+
+        to {
+            width: 50vw;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="first">linear</div>
+        <div class="second">ease</div>
+        <div class="third">ease-in</div>
+        <div class="fourth">ease-in-out</div>
+        <div class="fifth">cubic-bezier</div>
+        <div class="sixth">ease-out</div>
+    </div>
+</body>
+
+</html>
