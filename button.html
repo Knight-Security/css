@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    .parent {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .glow {
+        height: 5vh;
+        width: 10vw;
+        background-color: rgb(110, 110, 110);
+        color: white;
+        border: none;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .glow::after {
+        content: '';
+        height: 5vh;
+        width: 10vw;
+        position: absolute;
+        border-radius: 20px;
+        background-image: linear-gradient(to bottom right, blue, purple);
+        z-index: -1;
+
+    }
+
+    .glow:hover {
+        z-index: 1;
+        box-shadow: 40px 0px 100px blue;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <button class="glow">
+            Hover
+        </button>
+    </div>
+</body>
+
+</html>
