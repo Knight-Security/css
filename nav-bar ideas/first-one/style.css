@@ -1,0 +1,56 @@
+body {
+    background-image: linear-gradient(to bottom right, black, white);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    list-style: none;
+}
+
+.list {
+    height: 5vh;
+    width: 8vw;
+    font-size: larger;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.list::after {
+    content: '';
+    height: 99%;
+    width: 101%;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, rgb(28, 28, 255), rgb(30, 164, 248));
+    position: absolute;
+    z-index: -1;
+    
+}
+.list:hover::after{
+    transform: scale(1.1);
+
+}
+
+.list:hover{
+    color : white;
+    z-index: 1;
+    transform: scale(1.1);
+}
